@@ -12,6 +12,14 @@ body {
 .fw-b {
   font-weight: bold;  
 }
+.ls-1 {
+  letter-spacing: 1px;
+}
+/* ページ内リンクずれ修正 */
+#news, #item {
+  margin-top:-80px;
+  padding-top:80px;
+}
 /* carouserl section */
 .carousel-logo {
   text-shadow: 5px 5px 10px rgb(54, 19, 24);
@@ -38,6 +46,9 @@ body {
   width: 100%;
   background: rgb(167, 122, 64);
 }
+.navbar-nav {
+letter-spacing: 1.3px;
+}
 .navbar-brand img {
   max-width: 40%;
 }
@@ -51,7 +62,6 @@ body {
 .nav-item:hover {
   opacity: 0.6;
 }
-
 /* News section */
 .news-container {
   margin: 10px 20px;
@@ -250,7 +260,6 @@ footer {
 .sns-t, .sns-i {
   position: relative;
   z-index: 1;
-  /* background: rgb(179, 30, 82); */
   background: #272523e8;
   box-shadow:1px 1px 1px 1.2px rgb(231, 120, 135);
   width: 240px;
@@ -274,4 +283,82 @@ footer {
   opacity: 0.8;
   box-shadow:.5px .5px .5px rgb(231, 120, 135);
   transform:initial;
+}
+/* レスポンシブ */
+@media (Max-width:991px) {
+  .nav-item {
+    margin: 0 auto;
+    padding-right: 60px;
+    font-size: 15px;
+  }
+  .footer-left {
+    margin-right: 40px;
+  }
+  .footer-right iframe {
+    margin-top: 60px;
+    width:480px;
+    height:350px;
+  }
+  .sns-t, .sns-i {
+  width: 225px;
+  }
+  .navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(248, 245, 245)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+  body {
+    background-color: aquamarine;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    background-color: lightslategray;
+  }
+  .carousel-logo {
+    text-shadow: 5px 5px 10px rgb(54, 19, 24);
+    font-size: 42px;
+    padding-bottom: 27%;
+  }
+  .c-logo {
+    font-family: 'Playball', cursive;
+    color: #f29898;
+    font-size: 52px;
+    letter-spacing: .5px;
+  }
+  .card-container {
+    display: block!important;
+  }
+  .l-card {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    margin: 0 0 2px 0;
+  }
+  .thumbnail-wrapper img {
+    width: 350px;
+    height: 200px;
+  }
+
+}
+@media (max-width: 575px) {
+  .nav-item {
+    margin: 0 auto;
+    padding-right: 10px;
+  }
+  .navbar-brand img {
+    width: 210px;
+  }
+  body {
+    background-color: #f29898;
+  }
+  .carousel-logo {
+    text-shadow: 5px 5px 10px rgb(54, 19, 24);
+    font-size: 38px;
+    padding-bottom: 20%;
+  }
+  .c-logo {
+    font-family: 'Playball', cursive;
+    color: #f29898;
+    font-size: 48px;
+    letter-spacing: .5px;
+  }
 }
